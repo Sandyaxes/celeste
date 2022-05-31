@@ -1,0 +1,53 @@
+.left-fix {
+  position:fixed;
+  width: 70%;
+  right: 61%;
+  transform: rotate(55deg);
+}
+
+.right-fix {
+  position:fixed;
+  width: 70%;
+  left: 68%;
+  transform: rotate(230deg);
+  top: 15%;
+}
+
+.bottom-fix {
+  position:fixed;
+  width: 90%;
+  left: -10rpx;
+  bottom: -70rpx;
+}
+
+#line1 {
+  position: absolute;
+  left: 32%;
+  right: 32%;
+  bottom: 79.5%;
+  top: 5%;
+  font-family: 'Oleo Script';
+  font-weight: 400;
+  font-size: 90rpx;
+  line-height: 272rpx;
+  border-bottom: 4rpx solid rgb(252, 217, 23);
+  text-shadow: 0rpx 0rpx 66rpx rgba(191, 155, 48, 0.66);
+}
+
+#line2 {
+  position: absolute; 
+  left: 32%;
+  right: 32%;
+  top: 20.5%;
+  bottom: 75.41%;
+  font-family: 'Raleway';
+  font-size: 38rpx;
+}
+
+#line3 {
+  position: absolute;
+  left: 36%;
+  right: 34%;
+  bottom: 30%;
+  font-size: 38rpx;
+}

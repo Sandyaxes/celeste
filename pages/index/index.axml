@@ -1,0 +1,14 @@
+<view>
+  <view id="line1">
+    <text>Céleste</text>
+  </view>
+  <view id="line2">
+    <text>It’s an experience</text>
+  </view>
+  <view id="line3">
+    <text onTap="nextPage">Tasting Menu</text>
+  </view>
+  <image class="left-fix"  src="{{src}}"  />
+  <image class="right-fix"  src="{{src}}"  />
+  <image class="bottom-fix"  src="{{src}}" />
+</view>

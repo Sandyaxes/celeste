@@ -1,0 +1,13 @@
+<view class="add-box" >
+  <button class="minus-btn" onTap="decrement">-</button>
+  <text class="number">{{counter}}</text>
+  <button class="plus-btn" onTap="increment">+</button>
+  <text id="first-text">Number of Persons</text>
+  <text id="money-text">R{{money}} per person</text>
+  <view a:if="{{counter < 1}}">
+    <button class="btn-hide" id="add-btn" onTap="">Add to Order</button>
+  </view>
+    <view a:else>
+    <button id="add-btn" type="submit" onTap="addToOrder">Add to Order</button>
+  </view>
+</view>

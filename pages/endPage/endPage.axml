@@ -1,0 +1,11 @@
+<view>
+  <text class="title">Thank you,</text>
+  <text class="name">James</text>
+  <view class="text">
+    <text class="order">your order will be brought to table 317 shortly</text>
+    <text class="email">your invoice has been sent to james@gmail.com</text>
+  </view>
+  <view class="home-box">
+    <button class="home-btn" type="" onTap="toHome">Home</button>
+  </view>
+</view>

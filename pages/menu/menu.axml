@@ -1,0 +1,17 @@
+<view >
+  <view id="line1">
+    <text >Tasting Menu</text>
+  </view>
+  <view class="menu-box"></view>
+  <view class="leaf-box">
+    <image class="left-leaf" src="{{images.leftLeaf}}" />
+    <image class="right-leaf" src="{{images.rightLeaf}}" />
+    </wiew>
+    <view class="menu-text" a:for="{{menu}}">
+      <text id="meal">{{item.meal}}</text>
+      <text id="wine-pairing">{{item.wine}}</text>
+    </view>
+    <view>
+      <counter onRun='dataPass'></counter>
+    </view>
+  </view>

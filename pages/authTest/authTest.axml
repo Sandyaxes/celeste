@@ -1,0 +1,3 @@
+<view  class="page">
+  <button size="default" type="primary" onTap="GetAuthCode">Authenticate</button>
+</view>

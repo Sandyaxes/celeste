@@ -1,0 +1,14 @@
+.page{
+  padding-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  background-color: white;
+}
+.page > button{
+  width: 80%;
+  border-radius: 30rpx;
+  margin-top: 30rpx;
+}

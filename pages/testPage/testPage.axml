@@ -1,0 +1,4 @@
+<view>
+  New Page
+  <button id="customer-btn" class="tip-btn" type="" onTap="testing" tabindex="1">test</button>
+</view>

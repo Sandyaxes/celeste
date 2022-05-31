@@ -1,0 +1,47 @@
+<view>
+  <view class="title-text">
+    <text>Summery</text>
+  </view>
+  <view class="box">
+    <view class="summary-box">
+      <view class="inner-text">
+        <view id="left-text">
+          <text id="tasting-text">Tasting Menu</text>
+          <view id="cost">
+            <text>Number of Persons</text>
+            <text>Cost</text>
+           </view>
+        </view>
+        <view id="right-text">
+          <text>R100pp</text>
+          <text>{{counter}} people</text>
+          <text>R {{initialAmount}}.00</text>
+        </view>
+      </view>
+      <text id="tip-text">Would you like to add a tip?</text>
+      <view class="button-box">
+        <button class="tip-btn" type="" onTap="tenPercent">10%</button>
+        <button class="tip-btn" type="" onTap="fifteenPercent">15%</button>
+        <button class="tip-btn" type="" onTap="twentyPercent">20%</button>
+        <button id="customer-btn" class="tip-btn" type="" onTap="customerTip" tabindex="1">custom</button>
+        <text id="tip">R {{inputValue}}.00</text>
+      </view>
+      <view class="total-box">
+        <view class="left-input-text">
+          <text>Enter your amount</text>
+          <text id="total-text">Total Cost</text>
+        </view>
+        <view class="right-input-text">
+          <text id="currency">R<input id="input-text" type="number" onInput="bindKeyInput" placeholder="tip" minimum="1"/></text>
+          <text id="total">R {{cost}}.00</text>
+        </view>
+      </view>
+    </view>
+    <view class="pay-box" a:if="{{customer}}">
+      <button id="pay-btn"type="" onTap="nextpage">Pay with VodaPay</button>
+    </view>
+    <view class="pay-box-1" a:else>
+      <button id="pay-btn"type="" onTap="nextpage">Pay with VodaPay</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/menu/menu",
+    "pages/summary/summary",
+    "pages/endPage/endPage",
+    "pages/testPage/testPage",
+    "pages/authTest/authTest"
+  ],
+  "window": {
+    "defaultTitle": "Céleste",
+    "titleBarColor": "#08081B"
+  }
+}
