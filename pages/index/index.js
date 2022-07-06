@@ -5,7 +5,6 @@ Page({
   nextPage(){
     my.navigateTo({
       url: '../menu/menu'
-      // url: '../testPage/testPage'
     })
   },
   onLoad(query) {

@@ -1,5 +1,5 @@
 Page({
-  data: {},
+  // data: {},
   onLoad() {
    my.request({
       url: 'http://localhost:3000/launch',

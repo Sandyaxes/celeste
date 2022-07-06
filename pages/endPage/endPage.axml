@@ -1,9 +1,9 @@
 <view>
   <text class="title">Thank you,</text>
-  <text class="name">James</text>
+  <text class="name">{{name}}</text>
   <view class="text">
-    <text class="order">your order will be brought to table 317 shortly</text>
-    <text class="email">your invoice has been sent to james@gmail.com</text>
+    <text class="order">your order will be brought to table {{table}} shortly</text>
+    <text class="email">your invoice has been sent to {{email}}</text>
   </view>
   <view class="home-box">
     <button class="home-btn" type="" onTap="toHome">Home</button>

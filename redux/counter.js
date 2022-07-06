@@ -1,27 +1,32 @@
-let getMenu = ()=>{
+let getMenu = () => {
   return my.request({
-      url: 'http://localhost:3000/menu',
-      method: 'GET',
-    })
-} 
+    url: "https://celeste-sandile.herokuapp.com/menu",
+    method: "GET"
+  });
+};
 
 const menu = getMenu();
 
-export function counterReducer(state = { value: 0}, action) {
+export function counterReducer(state = { count: 0 }, action) {
   switch (action.type) {
-    case 'counter/incremented':
-      return { value: state.value + 1 }
-    case 'counter/decremented':
-      return { value: state.value - 1 }
+    case "counter/decremented":
+      return { count: state.count ? state.count - 1 : 0 };
+    case "counter/incremented":
+      return { count: state.count + 1 };
     default:
-      return state
+      return state;
   }
 }
 
-export function menuReducer(state = {value: menu}, action){
-  switch(action.type){
+export function menuReducer(state = { value: menu }, action) {
+  switch (action.type) {
     case "GET_MENU":
-      return {value: state.value}
-    default: state
+      return { ...state, value: state.value };
+    case "GET_USER":
+      return { ...state, user: action.payload };
+    case "GET_TOKEN":
+      return { ...state, token: action.payload };
+    default:
+      state;
   }
 }

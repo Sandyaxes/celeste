@@ -1,10 +1,10 @@
 import { request } from './request';
 
-const { BASE_URL, CLIENT_ID, isDevice, authScopes, userId } = app.data;
+// const { CLIENT_ID, isDevice, authScopes, userId } = app.data;
 const BASE_URL = 'localhost:3000' // Your api's domain
-const CLIENT_ID =  '' // the client id you are using on your backend
+const CLIENT_ID =  '2020122653946739963336' // the client id you are using on your backend
 const isDevice = process.env.NODE_ENV !== 'development' // checks if running on device or in simulator
-const userId = '' // use the id in the postman collection environment i sent
+const userId = '216610000000446291765' // use the id in the postman collection environment i sent
 const authScopes = ['auth_user']
 
 // my.getAuthCode can only run when on device. We run this piece of code when isDevice is true
@@ -16,6 +16,9 @@ const getTokenFromJSAPI = async () => {
         return resolve(result.authCode);
       },
       fail: (result) => {
+        my.alert({
+          content: "To give you the best possible experience we'll need permission to view your personal details. Visit our privacy policy to learn more."
+        });
         return reject(result);
       }
     });

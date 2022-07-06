@@ -11,7 +11,7 @@ Page({
   },
   async onLoad() {
     menuStore.dispatch({ type: "GET_MENU" })
-    let dataObj = await menuStore.getState().value;
+    let dataObj = await menuStore.getState().value
     let menu = dataObj.data
     this.setData({menu});
   },

@@ -10,7 +10,7 @@
           <view id="cost">
             <text>Number of Persons</text>
             <text>Cost</text>
-           </view>
+          </view>
         </view>
         <view id="right-text">
           <text>R100pp</text>
@@ -20,28 +20,33 @@
       </view>
       <text id="tip-text">Would you like to add a tip?</text>
       <view class="button-box">
-        <button class="tip-btn" type="" onTap="tenPercent">10%</button>
-        <button class="tip-btn" type="" onTap="fifteenPercent">15%</button>
-        <button class="tip-btn" type="" onTap="twentyPercent">20%</button>
-        <button id="customer-btn" class="tip-btn" type="" onTap="customerTip" tabindex="1">custom</button>
+        <button  class="{{active_1 ? 'tip-btn-active' : 'tip-btn'}}" type="" onTap="tenPercent" >10%</button>
+        <button class="{{active_2 ? 'tip-btn-active' : 'tip-btn'}}" type="" onTap="fifteenPercent">15%</button>
+        <button class="{{active_3 ? 'tip-btn-active' : 'tip-btn'}}" type="" onTap="twentyPercent">20%</button>
+        <button id="customer-btn" class="{{active_4 ? 'tip-btn-active' : 'tip-btn'}}" type="" onTap="customerActive">custom</button>
         <text id="tip">R {{inputValue}}.00</text>
       </view>
       <view class="total-box">
         <view class="left-input-text">
-          <text>Enter your amount</text>
+          <view a:if="{{customer}}">
+            <text>Enter your amount</text>
+          </view>
           <text id="total-text">Total Cost</text>
         </view>
         <view class="right-input-text">
-          <text id="currency">R<input id="input-text" type="number" onInput="bindKeyInput" placeholder="tip" minimum="1"/></text>
-          <text id="total">R {{cost}}.00</text>
+          <view a:if="{{customer}}">
+            <text id="currency">R
+              <input id="input-text" type="number" onInput="customerTip" placeholder="custom tip"/></text>
+          </view>
+          <text id="total">R {{cost == 0 ? initialAmount:initialAmount + inputValue}}.00</text>
         </view>
       </view>
     </view>
     <view class="pay-box" a:if="{{customer}}">
-      <button id="pay-btn"type="" onTap="nextpage">Pay with VodaPay</button>
+      <button id="pay-btn"type="" onTap="pay">Pay with VodaPay</button>
     </view>
     <view class="pay-box-1" a:else>
-      <button id="pay-btn"type="" onTap="nextpage">Pay with VodaPay</button>
+      <button id="pay-btn"type="" onTap="pay">Pay with VodaPay</button>
     </view>
   </view>
 </view>

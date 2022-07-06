@@ -1,12 +1,16 @@
+#over {
+  overflow: hidden;
+}
+
 .left-fix {
-  position:fixed;
+  position:absolute;
   width: 70%;
   right: 61%;
   transform: rotate(55deg);
 }
 
 .right-fix {
-  position:fixed;
+  position:absolute;
   width: 70%;
   left: 68%;
   transform: rotate(230deg);
@@ -14,10 +18,10 @@
 }
 
 .bottom-fix {
-  position:fixed;
+  position:absolute;
   width: 90%;
   left: -10rpx;
-  bottom: -70rpx;
+  bottom: -75rpx;
 }
 
 #line1 {
@@ -45,9 +49,12 @@
 }
 
 #line3 {
-  position: absolute;
+  display: flex;
+  justify-content: center;
+  /* position: absolute; */
   left: 36%;
   right: 34%;
-  bottom: 30%;
+  /* bottom: 30%; */
+  padding-top: 95%;
   font-size: 38rpx;
 }
